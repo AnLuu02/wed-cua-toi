@@ -1,0 +1,13 @@
+.thongtin span{
+    display: block;
+    margin-bottom: 10px;
+}
+.form input{
+    margin-bottom: 10px;
+}
+.right{
+    box-shadow: 20px 10px 50px #DCDCDC;
+    margin: 20px;
+    padding-bottom: 50px;
+}
+

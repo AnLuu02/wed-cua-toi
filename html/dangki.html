@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../icon/fontawesome/js/all.js"></script>
+    <title>Đăng kí</title>
+</head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .hea{
+        width: 400px;
+        border-radius: 15px;
+        box-shadow: 20px 50px px black;
+        padding: 10px 30px 30px 30px;
+        margin: auto;
+        font-size: 20px ;
+        background-color: aliceblue;
+        color: black;
+    }
+    a{
+        text-decoration: none;
+    }
+    input, button{
+        border-radius: 10px;
+        border-color:whitesmoke;
+        width: 400px;
+        height: 30px;
+        font-size: 15px;
+        padding-left: 10px;
+    }
+    #date{
+        width: 50px;
+    }
+</style>
+<body onload="createAdmin()">
+    <script src="../js/data.js"></script>
+    <div class="hea">
+        <div style="text-align: left;font-size: 15px;margin-left: 0px;">
+           
+            <a href="index.html"><i class="fas fa-arrow-left"></i></i>HOME</a>
+        </div>
+        <p style="font-size: 30px; text-align: center;"><b> Đăng kí tải khoản</b></p>
+        <form action="../html/dangnhap.html" method="">
+                <label for="username">Tên đăng nhập</label><br>
+                <input type="text" name="" id="username" placeholder="Tên đăng nhập"><br>
+                <div id="usernameLoi"></div><br>
+
+                <label for="password">Mật khẩu</label><br>
+                <input type="password" name="" id="password" placeholder="Mật khẩu"><br>
+                <div id="passwordLoi"></div><br>
+
+                <label for="name">Họ và tên</label><br>
+                <input type="text" name="" id="name" placeholder="Họ tên"><br>
+                <div id="nameLoi"></div><br>
+
+                <label for="address">Địa chỉ</label><br>
+                <input type="text" name="" id="address" placeholder="Địa chỉ"><br>
+                <div id="addressLoi"></div><br>
+
+                <label for="phone">Số điện thoại</label><br>
+                <input type="text" name="" id="phone" placeholder="Điện thoại"><br>
+                <div id="phoneLoi"></div><br>
+
+                <div style="text-align: center;">
+                    <input type="reset" name="" id="" style="width: 100px; background-color: #1877F2;color: white;height: 40px;">&ensp;&ensp;
+                    <button style="width: 100px; background-color: #1877f2;color: white;height: 40px;" onclick="createUser()">Đăng kí</button>
+                </div>
+            </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../icon/fontawesome/js/all.min.js"></script>
+    <title>Quản lí sản phẩm</title>
+    <style>
+		#changebox{
+			position:fixed;
+			top:50px;
+			left:30%;
+			width:800px;
+			height:400px;
+			background:#555;
+			border-radius: 50px;
+			display:none;
+		}
+		#changebox .l{
+			position:absolute;
+			top:50px;
+			left:50px;
+			width:200px;
+			height:300px;
+		}
+		#changebox .l img{
+			width:200px;
+			height:200px;
+			display:block;
+		}
+		#changebox .l #c-productimg {
+			display:block;
+			color:#fff;
+		}
+		#changebox .r{
+			position:absolute;
+			top:50px;
+			right:50px;
+			width:350px;
+			height:300px;
+			color:#fff;
+		}
+		#changebox .r input{
+			width:300px;
+			padding:10px;
+		}
+		#changebox .changebutton{
+			background-color:#fff;
+			width:100px;
+			padding:10px;
+			color:black;
+			text-align:center;
+			position:absolute;
+			bottom:10px;
+			left:38%;
+			cursor:pointer;
+			border:none;
+			border-radius:15px;
+		}
+		#changebox .changebutton:hover{
+			background-color: #33ff33;
+		}
+		#changebox .closechange{
+			background-color:#fff;
+			color:black;
+			padding:10px;
+			text-align:center;
+			position:absolute;
+			right:20px;
+			top:20px;
+		}
+		#changebox .closechange:hover{
+			background-color: red;
+			color:white;
+		}
+        body{
+            margin: 0px 0px 0px 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        .left{
+            width: 15%;
+            float: left;
+            background-color: dimgray;
+            color: white;
+            position: fixed;
+            top: 0px;
+            bottom: 0px;
+            padding: 2%;
+        }
+        nav{
+            width: 100%;
+            margin-top: 10%;
+        }
+        .right{
+            width: 81%;
+            float: right;
+        }
+        .right-head{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: 20px 20px 20px whitesmoke;
+            padding: 10px;
+        }
+        .left img{
+            height: 50px;
+            display: inline;        
+        }
+        th,td{
+            padding-right: 50px;
+        }   
+        .nhaphang input{
+            margin-right: 10px;
+            font-size: 100%;
+            border-radius: 10px;
+            padding: 5px;
+        }
+        .button{
+            background: #696969;
+            background-color: transparent;
+            padding: 0px 40px 0px 10px;
+        }
+        .button span{
+            margin-left: 15px;
+        }
+        .button:hover, a:hover {
+            color: red;
+            background-color: black;    
+        }
+        
+    </style>
+</head>
+<body onload=" showSanpham_admin();createproduct()">
+	<script src="../js/data.js"></script>
+
+        <div class="left">
+            <img src="../img/logo1.png" alt="">
+            <img src="../img/logo2.png" alt="">
+            <nav style="line-height: 60px;">
+                <a href="index.html"><div class="button"><i class="fas fa-home"></i><span>Trang chủ</span><br></div></a>
+                <a href="thongke.html"><div class="button"><i class="fas fa-outdent"></i> <span>Thống kê</span><br></div></a>
+                <a href="admin.html"><div class="button"><i class="fas fa-beer"></i><span>Quản lí sản phẩm</span><br></div></a>
+                <a href="quanlykhachhang.html"><div class="button"><i class="fas fa-user-friends"></i><span>Quản lí khách hàng</span><br></div></a>
+                <a href="quanlydonhang.html"><div class="button"><i class="fas fa-window-restore"></i><span>Quản lí đơn hàng</span><br></div></a>
+                <a href="index.html" onclick="logout()"> <div class="button" ><i class="fas fa-sign-in-alt" ></i> <span>Logout</span></div></a>
+            </nav>
+        </div>
+
+        <div class="right">
+            <div class="right-head">
+                <div><i class="fas fa-align-justify" style="font-size: 25px;"></i><span style="font-size: 25px;margin-left: 10px;">Quản lí sản phẩm</span></div>
+                <form action="" style="display: flex;">
+                    <input type="text" name="" id="" style="font-size: 20px; border-radius: 10px; border: none;background-color: #DCDCDC;padding: 10px 200px 10px 10px;margin: 0px 100px 0px 100px;" placeholder="Search here..." >
+                    <button type="submit" style="border-bottom-right-radius: 10px;border-top-right-radius: 10px;border: none; background-color: #696969; color: whitesmoke;margin-left: -21%;"><i class="fas fa-search" style="padding: 10px 10px 10px 10px; font-size: 20px;"></i> </button>   
+                </form>
+                <div>
+                    <p>Nhóm Fly Hight</p>
+                </div>
+            </div>
+            <div style="margin: 10px;border-radius: 10px;padding: 1px 0px 1px 10px;box-shadow: 20px 10px 50px #DCDCDC;border: none;">
+              <p>Thêm sản phẩm</p>
+            </div>
+
+            <div style="margin-left: 10%;">
+                <input type ="hidden" id = "index">
+				<input id = "productid" placeholder="Nhập ID" style = "height: 30px">
+				<input id = "chatlieu" placeholder="Nhập chất liệu" style = "height: 30px">
+				<input id = "productname" placeholder="Nhập tên sản phẩm" style = "height: 30px">
+				<input id = "productprice" placeholder="Giá bán" style = "height: 30px">
+                <button id = "productadd" onclick = "addSanpham();" style = "height: 30px">Thêm sản phẩm</button>
+                <div>
+                    <p>Ảnh sản phẩm</p>
+                    	<input type="file" id="files">
+                </div><br>
+			</div>
+
+			<div style="margin: 10px;border-radius: 10px;padding: 1px 0px 1px 10px;box-shadow: 20px 10px 50px #DCDCDC;border: none;">
+              <p>Danh sách sản phẩm</p>
+            </div>
+            <div style="margin-left: 10%;">
+                <div style="margin: auto;">
+                    <table border="1" id="productlist" cellpadding='10'></table>
+                </div>
+
+                <div id="changebox">
+                    <div class="l">
+                        <div id="c-productimg">
+                            <span>Sửa hình:</span><br>
+                            <br><input type="file" id="changeImg" onchange="changeimage();">
+                            <img src="../img/error.jpg" alt="" id="changeimg">
+                        </div>
+                    </div>
+                    <div class="r">
+                        <div><span>Nhập ID:</span><br><input id="c-productid" value=""/></div><br>
+                        <div><span>NHẬP CHẤT LIỆU:</span><br><input id="c-producttype" value=""/></div><br>
+                        <div><span>Nhập TÊN:</span><br><input id="c-productname" value=""/></div><br>
+                        <div><span>Nhập GIÁ:</span><br><input id="c-productprice" value=""/></div><br>
+                    </div>
+                    <button id="changebutton" class="changebutton">SỬA</button>
+                    <button class="closechange" onclick="closechange();">X</button>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

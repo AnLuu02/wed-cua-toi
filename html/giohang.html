@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport"content="width=device-width, initial-scale=1"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Giỏ hàng</title>
+	<script src="../icon/fontawesome/js/all.min.js"></script>
+	<link rel="stylesheet" href="../css/index.css">
+	</head>
+	<style>
+        .head{
+			background-color: cyan;
+			position: static;
+		}
+		.giohang{
+			margin: 0px 10% 20px 10%;
+			padding-bottom: 100px;
+			border: 1px solid blueviolet;
+			height: 100%;
+			box-shadow: 0px 0px 15px black;
+		}
+		.chon input{
+			padding: 10px;
+			background-color: sienna;
+			color: white;
+			font-weight: bold;
+			margin-right: 10px;
+		}
+		#giohangrong input{
+			width: 30px;
+		}
+		#giohangrong button{
+			background-color: white;
+		}
+		#accountUser{
+			display: none;
+		}
+	</style>
+<body onload="showGiohang();checkDangNhap()">
+	<script src="../js/data.js"></script>
+	
+	<div class="head" style="justify-content: space-around;">
+		<a href="index.html"><div style="margin-left: 40px;">
+			<img src="../img/logo1.png">
+			<img src="../img/logo2.png">
+		</div></a>
+
+		<nav style="margin-right: 200px; font-size: 20px;display: flex;" >
+			<div class="dropdown">
+				<a href="" ><i class="fas fa-user-plus"></i></a>
+				<div class="dropdown-content">
+					<div id="loginaccount">
+						<div><a href="dangnhap.html">Đăng nhập</a></div>
+						<div><a href="dangki.html">Đăng ki</a></div>
+					</div>
+					<div id="accountUser" class="accountUser"></div>
+				</div>
+			</div>
+			<a href=""><i class="fas fa-shopping-cart"></i></a>
+		</nav>
+	</div>
+	<div style="width: 140px;line-height: 5px;margin-left: 10%;margin-bottom: 20px;margin-top: 50px;">
+		<h1>Giỏ hàng</h1>
+		<hr color="black" size="2px">
+		<hr color="black" size="2px">	
+	</div>
+	
+
+    <div class="giohang">
+
+		<div>
+			<table style="border-bottom: 1px solid black;margin: auto;" id="giohangrong" cellpadding='50'></table>
+		</div>
+			
+			<div id="hoadon" class="billcontent"></div>
+
+			<div style="text-align: end;margin-right: 5%;color: sienna; font-weight: bold;font-size: 20px;" id="thanhtien">
+				<p>Thành tiền: <span id="tongtien"></span></p>
+			</div>
+			<div style="margin-left: 5%;" class="chon">
+				<input type="submit" value="Xóa tất cả" onclick="xoaGiohang()">
+				<input type="submit" value="Thanh toán" onclick="muaHang()">
+			</div>
+	</div>
+
+			<div class="footer">
+				<div style="display: flex;justify-content: space-around;">
+					<p>Câu hỏi thường gặp</p>
+					<p>Chính sách bảo mật</p>
+					<p>Chính sách đổi trả</p>
+					<p>Giao hàng</p>
+					<p>Hướng dẫn mua hàng</p>
+				</div>
+				<div>
+					<div style="text-align: center;">
+						<p>Địa chỉ shop: 275 An Dương Vương, Phường 03, Quận 05	, TP. Hồ Chí Minh</p>
+						<p>Điện thoại: 0979 08 6789</p>
+					</div>
+					<div style="text-align: center;">
+						<img src="../img/logo1.png" alt="" style="height: 50px;">
+						<img src="../img/logo2.png" alt="" style="height: 50px;">
+					</div>
+					<div style="text-align: center;font-size: 30px; padding: 10px;">
+						<a href="https://www.facebook.com/	"><i class="fab fa-facebook" style="color: white;"></i></a>
+						<a href="https://www.youtube.com/"><i class="fab fa-youtube"  style="color: white;"></i></a>			
+						<a href="https://www.instagram.com/"><i class="fab fa-instagram"  style="color: white;"></i></a>
+					</div>
+					<div style="text-align: center;">
+						<p>Copyright © 2015-2016 by Dochoitreem.com - All rights reserved.</p>
+						<p>Công ty cổ phần Yêu Trẻ chuyên kinh doanh buôn bán sỉ và lẻ các loại đồ chơi, đồ chơi trẻ em, đồ chơi cho bé, đồ chơi trẻ em an toàn như: búp bê, đất nặn, xe điều khiển từ xa.</p>
+					</div>
+				</div>
+		</div>
+</body>
+<script src="../js/data.js"></script>
+</html>

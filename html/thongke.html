@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../icon/fontawesome/js/all.min.js"></script>
+    <link rel="stylesheet" href="/css/thongke.css">
+    <title>Thống kê</title>
+    <style>
+        body{
+            margin: 0px 0px 0px 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        .left{
+            width: 15%;
+            float: left;
+            background-color: dimgray;
+            color: white;
+            position: fixed;
+            top: 0px;
+            bottom: 0px;
+            padding: 2%;
+        }
+        nav{
+            width: 100%;
+            margin-top: 10%;
+        }
+        .right{
+            width: 81%;
+            float: right;
+        }
+        .right-head{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: 20px 20px 20px whitesmoke;
+            padding: 10px;
+        }
+        .left img{
+            height: 50px;
+            display: inline;        
+        }
+        th,td{
+            padding-right: 50px;
+        }   
+        .nhaphang input{
+            margin-right: 10px;
+            font-size: 100%;
+            border-radius: 10px;
+            padding: 5px;
+        }
+        .button{
+            background: #696969;
+            background-color: transparent;
+            padding: 0px 40px 0px 10px;
+        }
+        .button span{
+            margin-left: 15px;
+        }
+        #danhmuc a:hover, .button:hover {
+            color: red;
+            background-color: black;    
+        }
+        
+    </style>
+</head>
+<body >
+	<script src="../js/data.js"></script>
+
+        <div class="left">
+            <img src="../img/logo1.png" alt="">
+            <img src="../img/logo2.png" alt="">
+            <nav style="line-height: 60px;" id="danhmuc">
+                <a href="index.html"><div class="button"><i class="fas fa-home"></i><span>Trang chủ</span><br></div></a>
+                <a href="thongke.html"><div class="button"><i class="fas fa-outdent"></i> <span>Thống kê</span><br></div></a>
+                <a href="admin.html"><div class="button"><i class="fas fa-beer"></i><span>Quản lí sản phẩm</span><br></div></a>
+                <a href="quanlykhachhang.html"><div class="button"><i class="fas fa-user-friends"></i><span>Quản lí khách hàng</span><br></div></a>
+                <a href="quanlydonhang.html"><div class="button"><i class="fas fa-window-restore"></i><span>Quản lí đơn hàng</span><br></div></a>
+                <a href="index.html" onclick="logout()"> <div class="button"><i class="fas fa-sign-in-alt"></i> <span>Logout</span></div></a>
+            </nav>
+        </div>
+
+
+        <div class="right">
+            <div class="right-head">
+                <div><i class="fas fa-align-justify" style="font-size: 25px;"></i><span style="font-size: 25px;margin-left: 10px;">Thống kê</span></div>
+                <form action="" style="display: flex;">
+                    <input type="text" name="" id="" style="font-size: 20px; border-radius: 10px; border: none;background-color: #DCDCDC;padding: 10px 200px 10px 10px;margin: 0px 100px 0px 100px;" placeholder="Search here..." >
+                    <button type="submit" style="border-bottom-right-radius: 10px;border-top-right-radius: 10px;border: none; background-color: #696969; color: whitesmoke;margin-left: -21%;"><i class="fas fa-search" style="padding: 10px 10px 10px 10px; font-size: 20px;"></i> </button>   
+                </form>
+                <div>
+                    <p>Nhóm Fly Hight</p>
+                </div>
+            </div>
+        <div style="display: flex;justify-content: space-around;margin-top: 15px;font-size: 15px;">
+            <div class="home-thongke">
+                <div  style="display: flex; align-items: center;justify-content: space-between;">
+                    <div>
+                        <p>Tổng khách hàng</p>
+                        <span>50</span>
+                </div>
+                <div style="border-radius: 10px;box-shadow: 0 5px 10px rgba(0,0,0,0.1);background-color: #AFEEEE;">
+                        </i><i class="fas fa-user-friends" style="padding: 15px;font-size: 30px;"></i>
+                </div>
+                </div>
+                <i class="fas fa-arrow-alt-circle-up" style="font-size: 30px; padding-top: 30px;color: #33FF99;"></i> &emsp;<span style="font-size: 20px;">Cập nhật</span>
+            </div>    
+            
+            <div class="home-thongke">
+                <div  style="display: flex; align-items: center;justify-content: space-between;">
+                    <div>
+                        <p>Sản phẩm</p>
+                        <span>750</span>
+                </div>
+                <div style="border-radius: 10px;box-shadow: 0 5px 10px rgba(0,0,0,0.1);background-color: #AFEEEE;">
+                        </i><i class="fas fa-clipboard-list" style="padding: 15px;font-size: 30px;"></i>
+                </div>
+                </div>
+                <i class="fas fa-arrow-alt-circle-up" style="font-size: 30px; padding-top: 30px;color: #33FF99;"></i> &emsp;<span style="font-size: 20px;">Cập nhật</span>
+            </div> 
+            <div class="home-thongke">
+                <div  style="display: flex; align-items: center;justify-content: space-between;">
+                    <div>
+                        <p>Tổng đơn hàng</p>
+                        <span>75</span>
+                </div>
+                <div style="border-radius: 10px;box-shadow: 0 5px 10px rgba(0,0,0,0.1);background-color: #AFEEEE;">
+                        <i class="fas fa-shopping-cart" style="padding: 15px;font-size: 30px;"></i>
+                </div>
+                </div>
+                <i class="fas fa-arrow-alt-circle-up" style="font-size: 30px; padding-top: 30px;color: #33FF99;"></i> &emsp;<span style="font-size: 20px;">Cập nhật</span>
+            </div> 
+            <div class="home-thongke">
+                <div  style="display: flex; align-items: center;justify-content: space-between;">
+                    <div>
+                        <p>Doanh thu</p>
+                        <span>75m5</span>
+                </div>
+                <div style="border-radius: 10px;box-shadow: 0 5px 10px rgba(0,0,0,0.1);background-color: #AFEEEE;">
+                     <i class="fas fa-dollar-sign" style="padding: 15px;font-size: 30px;"></i>
+                </div>
+                </div>
+                <i class="fas fa-arrow-alt-circle-up" style="font-size: 30px; padding-top: 30px;color: #33FF99;"></i> &emsp;<span style="font-size: 20px;">Cập nhật</span>
+            </div> 
+        </div>
+        <section class="home-section">
+            <!--Home content-->
+            <div class="home-content">
+                <!--Sale-->
+                <div class="sales-box">
+                    <div class="recent-sale">
+                        <div class="title">Tình Trạng Đơn Hàng</div>
+                        <hr style="border: 2px solid gray;width: 100%;">
+                        <div class="sale-details">
+                            <ul class="detail">
+                                <li class="topic">Ngày</li>
+                                <li><a href="#">10/12/2021</a></li>
+                                <li><a href="#">15/12/2021</a></li>
+                                <li><a href="#">19/12/2021</a></li>
+                                <li><a href="#">23/12/2021</a></li>
+                                <li><a href="#">24/12/2021</a></li>
+                                <li><a href="#">25/12/2021</a></li>
+                                <li><a href="#">26/12/2021</a></li>
+                                <li><a href="#">27/12/2021</a></li>
+                                <li><a href="#">28/12/2021</a></li>
+                            </ul>
+                            <ul class="detail">
+                                <li class="topic">Tên Khách Hàng</li>
+                                <li><a href="#">Nguyễn Văn A</a></li>
+                                <li><a href="#">Phan Thị Quỳnh N</a></li>
+                                <li><a href="#">Đặng Hoàng Thanh H</a></li>
+                                <li><a href="#">Nguyễn Quốc T</a></li>
+                                <li><a href="#">Nguyễn Đăng K</a></li>
+                                <li><a href="#">Nguyến Thị Kim N</a></li>
+                                <li><a href="#">Võ Khánh C</a></li>
+                                <li><a href="#">Hoàng Văn T</a></li>
+                                <li><a href="#">Vũ Pham Văn K</a></li>
+                            </ul>
+                            <ul class="detail">
+                                <li class="topic">Trạng Thái</li>
+                                <li class="color"><a href="#">Đã hoàn thành</a></li>
+                                <li class="color1"><a href="#">Đang vận chuyển</a></li>
+                                <li class="color1"><a href="#">Đang vận chuyển</a></li>
+                                <li class="color2"><a href="#">Đã hủy</a></li>
+                                <li class="color2"><a href="#">Đã hủy</a></li>
+                                <li class="color3"><a href="#">Chờ xử lí</a></li>
+                                <li class="color1"><a href="#">Đang vận chuyển</a></li>
+                                <li class="color"><a href="#">Đã hoàn thành</a></li>
+                                <li class="color"><a href="#">Đã hoàn thành</a></li>
+                            </ul>
+                            <ul class="detail">
+                                <li class="topic">Tổng Tiền</li>
+                                <li><a href="#">340.000đ</a></li>
+                                <li><a href="#">250.000đ</a></li>
+                                <li><a href="#">720.000đ</a></li>
+                                <li><a href="#">450.000đ</a></li>
+                                <li><a href="#">520.000đ</a></li>
+                                <li><a href="#">910.000đ</a></li>
+                                <li><a href="#">800.000đ</a></li>
+                                <li><a href="#">300.000đ</a></li>
+                                <li><a href="#">350.000đ</a></li>
+                            </ul>
+                        </div>
+                        <div class="button">
+                            <a href="#">See All</a>
+                        </div>
+                    </div>
+
+                    <div class="top-sale">
+                        <div class="title"><h2><b>Giảm giá</b></h2></div>
+                            <ul>
+                                <li>
+                                    <a href="">
+                                        <img src="/img/1.jpg" alt="">
+                                        
+                                    </a>
+                                    <span class="price"><del style="color: red;">310.000đ</del> &emsp;290.000đ</span>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <img src="/img/2.jpg" alt="">
+                                    </a>
+                                    <span class="price"><del style="color: red;">270.000đ</del> &emsp;240.000đ</span>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <img src="/img/3.jpg" alt="">
+                        
+                                    </a>
+                                    <span class="price"><del style="color: red;">400.000đ</del> &emsp;360.000đ</span>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <img src="/img/4.jpg" alt="">
+                                        
+                                    </a>
+                                    <span class="price"><del style="color: red;">470.000đ</del> &emsp;390.000đ</span>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <img src="/img/5.jpg" alt="">
+                
+                                    </a>
+                                    <span class="price"><del style="color: red;">260.000đ</del> &emsp;210.000đ</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+        </section>
+</body>
+</html>

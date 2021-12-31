@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../icon/fontawesome/js/all.min.js"></script>
+    <title>Quản lí khách hàng</title>
+    <style>
+        body{
+            margin: 0px 0px 0px 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        .left{
+            width: 15%;
+            float: left;
+            background-color: dimgray;
+            color: white;
+            position: fixed;
+            top: 0px;
+            bottom: 0px;
+            padding: 2%;
+        }
+        nav{
+            width: 100%;
+            margin-top: 10%;
+        }
+        .right{
+            width: 81%;
+            float: right;
+        }
+        .right-head{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: 20px 20px 20px whitesmoke;
+            padding: 10px;
+        }
+        .left img{
+            height: 50px;
+            display: inline;        
+        }
+        th,td{
+            padding-right: 50px;
+        }   
+        .nhaphang input{
+            margin-right: 10px;
+            font-size: 100%;
+            border-radius: 10px;
+            padding: 5px;
+        }
+        .button{
+            background: #696969;
+            background-color: transparent;
+            padding: 0px 40px 0px 10px;
+        }
+        .button span{
+            margin-left: 15px;
+        }
+        .button:hover, a:hover {
+            color: red;
+            background-color: black;    
+        }
+        
+    </style>
+</head>
+<body onload="showUser()">
+	<script src="../js/data.js"></script>
+
+        <div class="left">
+            <img src="../img/logo1.png" alt="">
+            <img src="../img/logo2.png" alt="">
+            <nav style="line-height: 60px;">
+                <a href="index.html"><div class="button"><i class="fas fa-home"></i><span>Trang chủ</span><br></div></a>
+                <a href="thongke.html"><div class="button"><i class="fas fa-outdent"></i> <span>Thống kê</span><br></div></a>
+                <a href="admin.html"><div class="button"><i class="fas fa-beer"></i><span>Quản lí sản phẩm</span><br></div></a>
+                <a href="quanlykhachhang.html"><div class="button"><i class="fas fa-user-friends"></i><span>Quản lí khách hàng</span><br></div></a>
+                <a href="quanlydonhang.html"><div class="button"><i class="fas fa-window-restore"></i><span>Quản lí đơn hàng</span><br></div></a>
+                <a href="index.html" onclick="logout()"> <div class="button"><i class="fas fa-sign-in-alt"></i> <span>Logout</span></div></a>
+            </nav>
+        </div>
+
+        <div class="right">
+            <div class="right-head">
+                <div><i class="fas fa-align-justify" style="font-size: 25px;"></i><span style="font-size: 25px;margin-left: 10px;">Quản lí khách hàng</span></div>
+                <form action="" style="display: flex;">
+                    <input type="text" name="" id="" style="font-size: 20px; border-radius: 10px; border: none;background-color: #DCDCDC;padding: 10px 200px 10px 10px;margin: 0px 100px 0px 100px;" placeholder="Search here..." >
+                    <button type="submit" style="border-bottom-right-radius: 10px;border-top-right-radius: 10px;border: none; background-color: #696969; color: whitesmoke;margin-left: -21%;"><i class="fas fa-search" style="padding: 10px 10px 10px 10px; font-size: 20px;"></i> </button>   
+                </form>
+                <div>
+                    <p>Nhóm Fly Hight</p>
+                </div>
+            </div>
+
+            <div style="margin:40px 100px 100px 100px;">
+                <table id="khachhang" border="1" cellpadding="10"></table>
+            </div>
+          
+        </div>
+</body>
+</html>

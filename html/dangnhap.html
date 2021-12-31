@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../icon/fontawesome/js/all.js"></script>
+    <title>Đăng nhập</title>
+</head>
+<style>
+    .content{
+        border-radius: 10px;
+        box-shadow: 20px 10px 50px #DCDCDC;
+        width: 25%; 
+        padding: 10px 30px 30px 30px; 
+        margin: auto;
+        text-align: center;
+        background-color: w;
+    }
+    button, input   {
+        width: 360px;
+        height: 50px;
+        border-color: white;
+        border-radius: 10px;
+        font-size: 15px;
+        }
+    button{
+        background-color: #1877F2;
+        color: white;
+    }
+    a{
+        text-decoration: none;
+        color: blueviolet   ;
+    }
+    a:hover{
+        
+        color: red;
+    }
+    #taikhoanLoi{
+        display: none;
+        text-align: start;
+        color: red;
+    }
+    #matkhauLoi{
+        display: none;
+        text-align: start;
+        color: red;
+    }
+</style>
+
+<body>
+    <div class="content" id="dangnhap">
+        <div style="text-align: left;font-size: 15px;margin-left: 0px;">
+           
+            <a href="index.html"><i class="fas fa-arrow-left"></i></i>HOME</a>
+        </div>
+        <div style="margin-bottom: 20px;">
+            <span style="font-size: 40px;">Tài khoản</span>
+        </div>
+        <div>
+           
+                <input type="text" name="" id="username" placeholder="Tài khoản..."><br>
+                <div id="taikhoanLoi">Tài khoản không đúng</div><br>
+                
+                <input type="password" name="" id="password" placeholder="Mật khẩu..."><br>
+                <div id="matkhauLoi">Mật khẩu không đúng</div><br>
+
+                <button type="submit" onclick="login()">Đăng nhập</button><br><br>
+         
+            <a href="" style="color:#1877F2;">Quên mật khẩu?</a><br><br>
+            <hr><br>
+            <form action="dangki.html">
+                <button style="background-color: #42B72A;width: 178px;">Tạo tài khoản mới</button>
+            </form>
+        </div>
+    </div>
+    <script src="../js/data.js"></script>
+</body>
+</html>
